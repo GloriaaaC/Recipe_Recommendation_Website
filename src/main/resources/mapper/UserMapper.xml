@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elec5619.recipeweb.mapper.UserMapper">
+
+    <resultMap id = "UserMap" type="com.elec5619.recipeweb.bean.User">
+        <id column="uid" property="uid"></id>
+        <result column="username" property="username"></result>
+        <result column="password" property="password"></result>
+        <result column="salt" property="salt"></result>
+        <result column="phone" property="phone"></result>
+        <result column="gender" property="gender"></result>
+        <result column="avatar" property="avatar"></result>
+        <result column="created_user" property="createdUser"></result>
+        <result column="created_time" property="createdTime"></result>
+        <result column="modified_user" property="modifiedUser"></result>
+        <result column="modified_time" property="modifiedTime"></result>
+        <result column="is_delete" property="isDelete"></result>
+    </resultMap>
+
+<!--    <insert id="insert" useGeneratedKeys="true" keyProperty="uid" parameterType="com.elec5619.recipeweb.bean.User">-->
+<!--        insert into t_user (`username`, `password`, `phone`, `gender`, `avatar`, `is_delete`,-->
+<!--                            `created_user`, `created_time`, `modified_user`, `modified_time`)-->
+<!--        values ( #{username}, #{password}, #{phone}, #{gender}, #{avatar}, #{isDelete},-->
+<!--                #{createdUser}, #{createdTime}, #{modifiedUser}, #{modifiedTime}-->
+<!--               )-->
+<!--    </insert>-->
+
+    <select id="findByUsername" resultMap="UserMap">
+        select *
+        from t_user
+        where username = #{username}
+    </select>
+
+</mapper>

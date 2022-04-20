@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elec5619.recipeweb.mapper.RecipeReviewMapper">
+    <select id="selectByRecipeId" resultType="com.elec5619.recipeweb.bean.RecipeReview">
+        select rr.id, rr.recipe_id, IFNULL(rr.rating, -1) rating, rr.review, rr.user_id, rr.is_delete, rr.created_user,
+               rr.created_time, rr.modified_user, rr.modified_time, tu.username
+        from recipe_review as rr
+        left join t_user as tu
+        on rr.user_id = tu.uid
+        where recipe_id = #{recipeId}
+        order by rr.modified_time DESC
+    </select>
+
+    <select id="selectAvgRatingByRecipeId" resultType="java.lang.Integer">
+        select AVG(rating)
+        from recipe_review
+        where recipe_id = #{recipeId} and is_delete = 0
+    </select>
+</mapper>

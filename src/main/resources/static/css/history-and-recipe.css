@@ -1,0 +1,136 @@
+/* common */
+
+.nav-icons>a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+
+.nav-icons>a:hover {
+    font-weight: bold;
+}
+
+.static-rating-stars {
+    color: orange;
+}
+
+/* history only */
+
+.card-custom {
+    overflow: hidden;
+    height: 315px;
+    min-height: 315px;
+    border: 0;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+    height: 150px;
+    min-height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+}
+
+/* customized scroll bar */
+/* https://mdbootstrap.com/docs/b4/jquery/javascript/scroll/ */
+
+.scrollbar-enabled {
+    position: relative;
+    overflow-y: auto;
+    /* height: 200px; */
+}
+
+.scrollbar-dusty-grass::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.scrollbar-dusty-grass::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-dusty-grass::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-linear-gradient(330deg, #e9e9e9 0%, #c9c9c9 100%);
+    background-image: linear-gradient(120deg, #e9e9e9 0%, #c9c9c9 100%);
+}
+
+.scrollbar-squared-tail::-webkit-scrollbar-track {
+    border-radius: 0 !important;
+}
+
+.scrollbar-squared-tail::-webkit-scrollbar-thumb {
+    border-radius: 0 !important;
+}
+
+.scrollbar-invisible::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* recipe only */
+
+.recipe-img {
+    width: 350px;
+    height: 350px;
+}
+
+hr.sep {
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to right, #f0f0f0, #b3b3b3, #f0f0f0);
+}
+
+.media-img {
+    width: 64px;
+    height: 64px;
+    max-height: 64px;
+}
+
+/* user rating */
+
+.card.user-rating-card, .card.user-rating-card>.card-body {
+    width: 143px;
+    min-width: 0;
+    padding: 0;
+    border: none;
+}
+
+.user-rating [id^="star"] {
+    display: none;
+}
+
+.user-rating>label {
+    margin: 0;
+}
+
+.user-rating>label:before {
+    margin: 3px;
+    font-size: 1.5em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.user-rating>label.half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.user-rating>label {
+    color: #ddd;
+    float: right;
+}
+
+.user-rating>[id^="star"]:checked~label,.user-rating:not(:checked)>label:hover,.user-rating:not(:checked)>label:hover~label {
+    color: #FFD700;
+}
+
+.user-rating>[id^="star"]:checked+label:hover,.user-rating>[id^="star"]:checked~label:hover,.user-rating>label:hover~[id^="star"]:checked~label,.user-rating>[id^="star"]:checked~label:hover~label {
+    color: #FFED85;
+}

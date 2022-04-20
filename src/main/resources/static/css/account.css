@@ -1,0 +1,196 @@
+.wrap {
+    min-width: 100%;
+    position: absolute;
+    background: #eff3f6 bottom;
+    min-height: 100%;
+    overflow: hidden;
+}
+.left{
+    margin-left:0px;
+    position: absolute;
+    box-sizing: border-box;
+    width: 200px;
+    height: 100%;
+    background: #4d5e70 bottom;
+}
+.logoDiv{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 70px;
+    background-color: #354457;
+    font-size: 17px;
+    color: #fff;
+    vertical-align: bottom;
+}
+.logoTitle{
+    margin-left:15px;
+    line-height: 1.7;
+}
+.menu-title {
+    margin-left:15px;
+    color: #828e9a;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.profile {
+    margin-left:45px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.favourite-title{
+    margin-left:60px;
+    padding-top: 65px;
+}
+
+.delete-title{
+    float: right;
+    margin-right:50px;
+    padding-top: 65px;
+}
+
+.relative_class{
+    position: relative;
+}
+
+.change-password{
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    padding-left:15px;
+    line-height: 40px;
+    height: 40px;
+    color: #d5e0e8;
+    cursor: pointer;
+}
+.menu-item-active {
+    padding-left:15px;
+    line-height: 40px;
+    height: 40px;
+    color: darkgrey;
+    cursor: pointer;
+}
+.right{
+    box-sizing: border-box;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 200px;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    clear: both;
+    color: #717592;
+    min-width: 100%;
+    min-height: 500px;
+}
+
+.round_icon{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    border-radius: 80%;
+    left:300px;
+    top:150px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.folder-custom {
+    overflow: hidden;
+    height: 230px;
+
+}
+
+.folder-custom-img {
+    height: 150px;
+    min-height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+}
+
+.recipe-custom {
+    overflow: hidden;
+    border: 0;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.img-center {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+.folder-name{
+    height: 100px;
+    width: 30%;
+    text-align:center;
+    line-height:100px;
+}
+.bottom{
+    position: absolute;
+    z-index: 1;
+}
+
+.top{
+    position: absolute;
+    z-index: 2;
+}
+
+.folder-name {
+    color: orange;
+
+}
+
+.delete-img{
+    width: 15%;
+    display: none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

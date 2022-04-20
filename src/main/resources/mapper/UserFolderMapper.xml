@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elec5619.recipeweb.mapper.UserFolderMapper">
+
+    <resultMap id = "BaseMap" type="com.elec5619.recipeweb.bean.UserFolder">
+        <id column="id" property="id"></id>
+        <result column="folder_name" property="folderName"></result>
+        <result column="user_id" property="userId"></result>
+        <result column="created_user" property="createdUser"></result>
+        <result column="created_time" property="createdTime"></result>
+        <result column="modified_user" property="modifiedUser"></result>
+        <result column="modified_time" property="modifiedTime"></result>
+        <result column="is_delete" property="isDelete"></result>
+    </resultMap>
+
+    <select id="getRecipesByFolderId" resultType="com.elec5619.recipeweb.bean.UserRecipe">
+        select ur.rid,  ur.recipe_id,  ur.uid,  ur.recipe_name,  ur.image_url,  ur.is_delete,
+               ur.is_favorite,  ur.created_user,  ur.created_time,  ur.modified_user,  ur.modified_time
+        from
+        folder_recipe as fr
+        left join user_recipe as ur
+        on fr.recipe_id = ur.rid
+        where fr.folder_id = #{folderId} and fr.is_delete = 0 and ur.is_delete = 0
+    </select>
+
+</mapper>

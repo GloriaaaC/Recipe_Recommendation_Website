@@ -1,4 +1,4 @@
-# ELEC5619 Project - *Pick&Cook*
+# *Pick&Cook* Recipe Recommendation Website
 
 ## Dependencies
 <!-- List all used libraries and their versions -->
